@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 
 //@author Fernando Racca
@@ -21,6 +22,12 @@ public class EjercicioClase2 {
         System.out.println("Guardo los Strings en una nueva lista e imprimo la lista nueva:");
         listaStrings.stream().map(s -> s.toUpperCase()).forEach(x -> listaStringsMayuscula.add(x));
         listaStringsMayuscula.stream().forEach(System.out::println);
+        
+        //SOLUCION DESPUES DE LA CLASE 3
+        System.out.println("Guardo con collect:");
+        List <String> listaStringMayuscula2 = listaStrings.stream().map(s -> s.toUpperCase())
+                 .collect(Collectors.toList());
+        listaStringMayuscula2.stream().forEach(System.out::println);
     }
 
 }

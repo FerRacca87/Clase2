@@ -64,20 +64,15 @@ public class Clase2 {
         numeros.stream().map(n -> n * 2).forEach(System.out::println);
         
         
+        System.out.println("*******************");       
+        for(int i = 0; i < numeros.size(); i++){
+            System.out.println(numeros.get(i));
+        }
+        System.out.println("*******************");       
+        numeros.stream().forEach(System.out::println);
         
         
         
-        
-        
-        
-        
-        
-        
-        
-
-        /* int suma = calcular(unNumero, otroNumero, (a, b) -> a + b);
-        System.out.println("La suma de " + unNumero + " y " + otroNumero + " es: " + suma);
-         */
     }
 
     
